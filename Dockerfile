@@ -14,3 +14,4 @@ ADD update-exim4.conf.conf /etc/exim4/update-exim4.conf.conf
 ADD exim4 /etc/default/exim4
 
 CMD ["/usr/bin/supervisord"]
+VOLUME ["/srv/alerting"]
