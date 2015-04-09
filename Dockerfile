@@ -3,8 +3,8 @@ MAINTAINER docker@deliverous.com
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get -y dist-upgrade && apt-get install -y python-pip python-dev supervisor exim4 && apt-get clean
 
-RUN pip install graphite-beacon==0.13.3
-RUN pip install supervisor-stdout==0.1.1
+RUN pip install graphite-beacon
+RUN pip install supervisor-stdout
 
 # Supervisord
 ADD supervisor.conf /etc/supervisor/conf.d/deliverous.conf
