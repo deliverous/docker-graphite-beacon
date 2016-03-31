@@ -1,7 +1,7 @@
 From debian
 MAINTAINER docker@deliverous.com
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get -y dist-upgrade && apt-get install -y python-pip python-dev supervisor exim4 && apt-get clean
+RUN apt-get update && apt-get install -y python-pip python-dev supervisor exim4 && apt-get clean
 
 RUN pip install graphite-beacon
 RUN pip install supervisor-stdout
